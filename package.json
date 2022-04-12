@@ -1,0 +1,22 @@
+{
+  "name": "dxi-chat",
+  "version": "1.0.0",
+  "description": "Js ui library for chatbot",
+  "main": "library.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DeexithParand2k2/dxi-chat.git"
+  },
+  "keywords": [
+    "dxi"
+  ],
+  "author": "deexith",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DeexithParand2k2/dxi-chat/issues"
+  },
+  "homepage": "https://github.com/DeexithParand2k2/dxi-chat#readme"
+}
