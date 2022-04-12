@@ -170,3 +170,16 @@ function dxiUserChat(userChat){
     var parent = document.getElementsByTagName("body")[0];
     parent.appendChild(newDiv);
 }
+
+module.exports = {
+    dxiCreateMainInterface,
+    dxiUserChatInterface,
+    dxiBotChatInterface,
+    dxiBotChat,
+    dxiUserChat,
+}
+
+exports.dxiUserTextColor = dxiUserTextColor;
+exports.dxiBotTextColor = dxiBotTextColor;
+exports.dxiBotBorderColor = dxiBotBorderColor;
+exports.dxiUserTextColor = dxiUserTextColor;
