@@ -1,13 +1,13 @@
 //global variables
-var dxiUserTextColor;
-var dxiUserBorderColor;
+export var dxiUserTextColor;
+export var dxiUserBorderColor;
 //variable declaration for bot chat
-var dxiBotTextColor;
-var dxiBotBorderColor;
+export var dxiBotTextColor;
+export var dxiBotBorderColor;
 
 
 // 1.
-function dxiCreateMainInterface(dxiBackColor,dxiBoxColor){
+export function dxiCreateMainInterface(dxiBackColor,dxiBoxColor){
     var bodyDiv = document.getElementsByTagName("body")[0];
 
     var styles = {
@@ -31,7 +31,7 @@ function dxiCreateMainInterface(dxiBackColor,dxiBoxColor){
 }
 
 // 2.
-function dxiCreateInputBox(dxiBoxColor){
+export function dxiCreateInputBox(dxiBoxColor){
 
     //2a. marginDiv Clone
     var newDiv = document.createElement("div");
@@ -80,11 +80,13 @@ function dxiCreateInputBox(dxiBoxColor){
         "border"           : "none",
         "background-color" : "transparent",
         "border"           : "none",
+        "width"            : "100%",
 
-        "font-family"      : "'Source Sans Pro', sans-serif",
+        "font-family"      : "'Roboto', sans-serif",
         "font-weight"      : "bold",
+        "color"            : "white",
 
-        "caret-color"      : "red",
+        "caret-color"      : "white",
 
         "margin"           : "10px",
         "padding"          : "10px",
@@ -97,18 +99,18 @@ function dxiCreateInputBox(dxiBoxColor){
 }
 
 //3. call these before calling the UserChat
-function dxiUserChatInterface(textColor, borderColor){
+export function dxiUserChatInterface(textColor, borderColor){
     dxiUserTextColor = textColor;
     dxiUserBorderColor = borderColor;
 }
 
-function dxiBotChatInterface(textColor, borderColor){
+export function dxiBotChatInterface(textColor, borderColor){
     dxiBotTextColor = textColor;
     dxiBotBorderColor = borderColor;
 }
 
 //4. call these to create chat boxes
-function dxiBotChat(botChat){
+export function dxiBotChat(botChat){
     var newDiv = document.createElement("div");
 
     var styles = {
@@ -129,7 +131,7 @@ function dxiBotChat(botChat){
 
         "color"        : dxiBotTextColor,
         "font-family"  : "'Source Sans Pro', sans-serif",
-        "font-weight"  : "bold",
+        "font-weight"  : "light",
     };
 
     Object.assign(newDiv.style,styles);
@@ -139,7 +141,7 @@ function dxiBotChat(botChat){
     parent.appendChild(newDiv);
 }
 
-function dxiUserChat(userChat){
+export function dxiUserChat(userChat){
     var newDiv = document.createElement("div");
 
     var styles = {
@@ -161,7 +163,7 @@ function dxiUserChat(userChat){
 
         "color"        : dxiUserTextColor,
         "font-family"  : "'Source Sans Pro', sans-serif",
-        "font-weight"  : "bold",
+        "font-weight"  : "light",
     };
 
     Object.assign(newDiv.style,styles);
@@ -171,15 +173,4 @@ function dxiUserChat(userChat){
     parent.appendChild(newDiv);
 }
 
-module.exports = {
-    dxiCreateMainInterface,
-    dxiUserChatInterface,
-    dxiBotChatInterface,
-    dxiBotChat,
-    dxiUserChat,
-}
 
-exports.dxiUserTextColor = dxiUserTextColor;
-exports.dxiBotTextColor = dxiBotTextColor;
-exports.dxiBotBorderColor = dxiBotBorderColor;
-exports.dxiUserTextColor = dxiUserTextColor;
